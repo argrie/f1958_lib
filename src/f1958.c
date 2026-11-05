@@ -40,7 +40,9 @@ f1958_err_t f1958_deinit(f1958_device_t *thisDevice) {
 }
 
 f1958_err_t f1958_spi_run(f1958_device_t *this_device, f1958_reg_value_t spi_send_data) {
-
+	// this is the part of the driver were hardware interaction is happening. 
+	// Addept SPI and chip-select GPIO commands to your current hardware (i.e. used microcontroller).
+	// The commands below are for an STM32 project. 
 	#ifndef TESTINGWOHW
 	HAL_GPIO_WritePin((GPIO_TypeDef*) (this_device->spi_if.cs_port), (uint16_t) (this_device->spi_if.cs_pin), GPIO_PIN_RESET); //CS LOW
 	HAL_SPI_TransmitReceive(this_device->spi_if.hspi, &spi_send_data, &spi_read_data, 1, F1958_SPI_TIMEOUT);
