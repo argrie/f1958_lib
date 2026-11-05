@@ -12,11 +12,12 @@
 #include "../inc/main.h"
 #include "../inc/f1958.h"
 
+// this is only to illustrate how the driver works.
 int main(void)
 {
 	f1958_device_t F1958 = f1958_device_default;
-
-	//si5391_spi_conf_t si5391_spi_conf = {.cs_pin = CSb_Pin, .cs_port = CSb_GPIO_Port, .hspi = "hspi4"};
+	// The structure of si5391_spi_conf_t and the handle and pin definitions below below are for an STM32 project. 
+	// This has to be adapted if other microcontrollers are used to control the F1958.
 	printf("\n=> Initialize the device.\n");
 	f1958_init(&F1958, (f1958_spi_conf_t) {.cs_pin = CSb_Pin, .cs_port = CSb_GPIO_Port, .hspi = "hspi4"});
 	for (int i =0;i<128;i++) {
