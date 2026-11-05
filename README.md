@@ -1,0 +1,1 @@
+A very simple driver for Renesas' F1958 programmable attenuators. Use f1958_damp_dB(float dampdB); to set the damping. This was used in a STM32H7 series project but should be very easy to adept to other microcontrollers by modifying the SPI interface definition and SPI/GPIO commands. 
