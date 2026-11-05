@@ -26,6 +26,8 @@
 
 typedef enum f1958_err {F1958_NOERR, F1958_ERR, F1958_ERR_PARAM_OUTOFRANGE} f1958_err_t;
 typedef unsigned char f1958_reg_value_t;
+// The structure of si5391_spi_conf_t and the handle and pin definitions below below are for an STM32 project. 
+// This and the f1958_spi_run() function definition have to be adapted if other microcontrollers are used to control the F1958.
 typedef struct	f1958_spi_conf {
 	uint16_t 					cs_pin;
 	uint32_t 					cs_port;
