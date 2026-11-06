@@ -40,7 +40,7 @@ f1958_err_t f1958_deinit(f1958_device_t *thisDevice) {
 }
 
 f1958_err_t f1958_spi_run(f1958_device_t *this_device, f1958_reg_value_t spi_send_data) {
-	// this is the part of the driver were hardware interaction is happening. 
+	// this is the part of the driver where hardware interaction is happening. 
 	// Addept SPI and chip-select GPIO commands to your current hardware (i.e. used microcontroller).
 	// The commands below are for an STM32 project. 
 	#ifndef TESTINGWOHW
